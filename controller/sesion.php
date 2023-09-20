@@ -1,10 +1,19 @@
-<?php include("../model/conexion.php");
-
+<?php include("../model/conexion.php");  
     session_start();
 
     $usuario = $_POST['usuario'];
     $clave = $_POST['password'];
+
     $_SESSION['usuario']=$usuario;
+
+    if (!preg_match('/^(\w*\d+|\w*)(@)(gmail|yahoo|hotmail|outlook)(\.)(com\.co|com)$/', $usuario)){
+        // El "correo" es incorrecto
+    }
+
+    if (!preg_match('/[A-Z]{1}[A-Za-z0-9\W]{8,12}/', $clave)){
+        // La "clave" es incorrecta
+    }
+    
 	
     
     
@@ -22,7 +31,7 @@
         {
             case 1:
                 echo "<script>alert('Bienvenido RESIDENTE al sistema');
-                    location.href='residente.html';
+                    location.href='../view/residente.php';
                 </script>";
             break;
             case 2:
@@ -32,12 +41,12 @@
             break;
             case 3:
                 echo "<script>alert('Bienvenido VIGILANTE al sistema');
-                    location.href='vigilante.html';
+                    location.href='../view/vigilante.php';
                 </script>";
             break;
             case 4:
                 echo "<script>alert('Bienvenido TODERO al sistema');
-                    location.href='todero.html';
+                    location.href='../view/novedades.php';
                 </script>";
             break;
         }
