@@ -149,7 +149,7 @@ if (!isset($_SESSION['usuario'])) {
                                 <!-- Inmueble -->
 
                                 <label for="numeroInmueble" class="form-label" style="margin-top: 15px; margin-bottom: 15px; font-weight: 700; color:#23518C;" >Numero Inmueble</label>
-                                <input type="tel" class="form-control" name="ninmMulta" aria-describedby="numeor del inmueble con la multa" maxlength="3" placeholder="numero Inmueble..." pattern="([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-3][0-9]|240)$" title="Mayor a 0 y un máximo de 240" required>
+                                <input type="tel" class="form-control" name="ninmMulta" aria-describedby="numero del inmueble con la multa" maxlength="3" placeholder="numero Inmueble..." pattern="([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-3][0-9]|240)$" title="Mayor a 0 y un máximo de 240" required>
                                 <!-- Tipo de Multa -->
 
                                 <label for="tipoMulta" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Tipo de multa</label>
