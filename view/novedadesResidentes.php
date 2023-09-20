@@ -153,7 +153,7 @@ if (!isset($_SESSION['usuario'])) {
                         <option>Todero</option>
                         <option>Administrador</option>
                         </select>
-                        
+        
                         <!-- Asunto de Novedad -->
 
                         <label for="asuntonovedad" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Asunto Novedad</label>
@@ -175,12 +175,6 @@ if (!isset($_SESSION['usuario'])) {
                             <textarea class="form-control" placeholder="Leave a comment here" name="descNovedades" style="height: 100px" maxlength="180" pattern="^[a-zA-Z\s]{1,80}$" title="Ingresa solo letras y espacios" required></textarea>
                             <label for="descripcionNovedad" style="font-size: 13px;">Razon</label>
                         </div>
-
-                        <!-- Documento Novedad -->
-
-                        <label for="documentoNovedad" class="form-label" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Documento Novedad</label>                                            
-                        <input class="form-control" type="file" name="docNovedades">
-                        
         
                         <!-- Fecha Evidencia -->
 
@@ -206,6 +200,7 @@ if (!isset($_SESSION['usuario'])) {
 
                         </select>
 
+
                         <!-- Estado novedad -->
 
                         <label for="estadoNovedad" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Estado Novedad</label>
@@ -222,9 +217,12 @@ if (!isset($_SESSION['usuario'])) {
                     
                     </form>
 
-                     <!-- Boton descargar archivo -->
-                        <button type="submit" class="btn btn-primary mb-3" style="margin-top: 30px; background-color: #0d0d0d; color: #f2ebdc; border: 1px solid rgba(0,0,0,0.15);" onclick="window.location.href='../view/informeMulta.php'">Descargar</button>
-                                   
+                    <!-- Boton descargar archivo -->
+                    <button type="submit" class="btn btn-primary mb-3" style="margin-top: 30px; background-color: #0d0d0d; color: #f2ebdc; border: 1px solid rgba(0,0,0,0.15);" onclick="window.location.href='../view/informeNovedades.php'">Descargar</button>
+                                
+                        
+
+                
                     </div>
 
                     <!-- Imagen -->
@@ -252,7 +250,6 @@ if (!isset($_SESSION['usuario'])) {
                 <th scope="col">tipoNovedad</th>
                 <th scope="col">Asunto</th>
                 <th scope="col">Descripcion</th>
-                <th scope="col">Documento</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Respuesta</th>
                 <th scope="col">Estado</th>
@@ -273,7 +270,6 @@ if (!isset($_SESSION['usuario'])) {
                             <td><?= $datos->TipoNovedad?></td>
                             <td><?= $datos->asuntoNovedades?></td>
                             <td><?= $datos->descNovedades?></td>
-                            <td><?= $datos->docNovedades?></td>
                             <td><?= $datos->fecNovedades?></td>
                             <td><?= $datos->resNovedades?></td>
                             <td><?= $datos->estNovedades?></td>
