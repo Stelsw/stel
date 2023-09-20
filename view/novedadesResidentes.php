@@ -142,11 +142,11 @@ if (!isset($_SESSION['usuario'])) {
                         <!-- Remitente novedad -->    
                         
                         <label for="remitenteNovedad" class="form-label" style="margin-top: 15px; margin-bottom: 15px; font-weight: 700; color:#23518C;" >Remitente Novedad</label>
-                        <input type="text" class="form-control" name="remNovedades" aria-describedby="Remitente" maxlength="30" placeholder="Nombre">
+                        <input type="text" class="form-control" name="remNovedades" aria-describedby="Remitente" maxlength="30" placeholder="Nombre" pattern="[A-Za-z\s]+" title="Ingresa solo letras y espacios" required>
                         
                         <!-- Tipo novedad --> 
                         <label for="tipoNovedad1" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Tipo de Novedad</label>
-                        <select name=TipoNovedad class="form-select" aria-label="Tipo de novedad">
+                        <select name=TipoNovedad class="form-select" aria-label="Tipo de novedad" required>
                         <option>tipo novedad...</option>
                         <option>Vigilante</option>
                         <option>Residente</option>
@@ -160,7 +160,7 @@ if (!isset($_SESSION['usuario'])) {
                         <!-- Asunto de Novedad -->
 
                         <label for="asuntonovedad" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Asunto Novedad</label>
-                        <select name="asuntoNovedades"class="form-select" aria-label="Asunto">
+                        <select name="asuntoNovedades"class="form-select" aria-label="Asunto" required>
 
                         <option>Asunto de novedad...</option>
                         <option value="Solicitud Inmueble">Solicitud permiso laboral</option>
@@ -175,7 +175,7 @@ if (!isset($_SESSION['usuario'])) {
                             
                         <label for="descripcionNovedad" class="form-label" style="margin-top: 15px; margin-bottom: 15px; font-weight: 700; color:#23518C" >Descripción novedad</label>
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" name="descNovedades" style="height: 100px" maxlength="180"></textarea>
+                            <textarea class="form-control" placeholder="Leave a comment here" name="descNovedades" style="height: 100px" maxlength="180" pattern="^[a-zA-Z\s]{1,80}$" title="Ingresa solo letras y espacios" required></textarea>
                             <label for="descripcionNovedad" style="font-size: 13px;">Razon</label>
                         </div>
 
@@ -189,13 +189,13 @@ if (!isset($_SESSION['usuario'])) {
                         <!-- Fecha Evidencia -->
 
                         <label for="fechaNovedades" class="form-label" style="margin-top: 15px; margin-bottom: 15px; font-weight: 700; color:#23518C" >Fecha Novedad</label>
-                        <input type="date" class="form-control" name="fecNovedades" aria-describedby="fecha_de_asignacion_Novedad">
+                        <input type="date" class="form-control" name="fecNovedades" aria-describedby="fecha_de_asignacion_Novedad" required>
     
                         
                         <!-- Respuesta Novedad -->
 
                         <label for="respuestanovedad" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Respuesta Novedad</label>
-                        <select name="resNovedades"class="form-select" aria-label="Asunto">
+                        <select name="resNovedades"class="form-select" aria-label="Asunto" required>
                         
                         <option>Respuesta de novedad...</option>
                         <option value="Solicitud Inmueble">Revisar cronograma</option>
@@ -214,7 +214,7 @@ if (!isset($_SESSION['usuario'])) {
                         <!-- Estado novedad -->
 
                         <label for="estadoNovedad" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Estado Novedad</label>
-                        <select name="estNovedades"class="form-select" aria-label="Asunto1">
+                        <select name="estNovedades"class="form-select" aria-label="Asunto1" required>
 
                         <option>Estado de Novedad...</option>
                         <option value="Solicitud Inmueble">Espera</option>
