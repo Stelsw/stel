@@ -153,9 +153,6 @@ if (!isset($_SESSION['usuario'])) {
                         <option>Todero</option>
                         <option>Administrador</option>
                         </select>
-        
-                        
-                        
                         
                         <!-- Asunto de Novedad -->
 
@@ -184,7 +181,6 @@ if (!isset($_SESSION['usuario'])) {
                         <label for="documentoNovedad" class="form-label" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Documento Novedad</label>                                            
                         <input class="form-control" type="file" name="docNovedades">
                         
-                        
         
                         <!-- Fecha Evidencia -->
 
@@ -210,7 +206,6 @@ if (!isset($_SESSION['usuario'])) {
 
                         </select>
 
-
                         <!-- Estado novedad -->
 
                         <label for="estadoNovedad" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Estado Novedad</label>
@@ -227,9 +222,9 @@ if (!isset($_SESSION['usuario'])) {
                     
                     </form>
 
-                        
-
-                
+                     <!-- Boton descargar archivo -->
+                        <button type="submit" class="btn btn-primary mb-3" style="margin-top: 30px; background-color: #0d0d0d; color: #f2ebdc; border: 1px solid rgba(0,0,0,0.15);" onclick="window.location.href='../view/informeMulta.php'">Descargar</button>
+                                   
                     </div>
 
                     <!-- Imagen -->
