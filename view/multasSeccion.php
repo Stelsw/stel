@@ -149,11 +149,11 @@ if (!isset($_SESSION['usuario'])) {
                                 <!-- Inmueble -->
 
                                 <label for="numeroInmueble" class="form-label" style="margin-top: 15px; margin-bottom: 15px; font-weight: 700; color:#23518C;" >Numero Inmueble</label>
-                                <input type="tel" class="form-control" name="ninmMulta" aria-describedby="numeor del inmueble con la multa" maxlength="3" placeholder="numero Inmueble..." required>
+                                <input type="tel" class="form-control" name="ninmMulta" aria-describedby="numeor del inmueble con la multa" maxlength="3" placeholder="numero Inmueble..." pattern="([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-3][0-9]|240)$" title="Mayor a 0 y un máximo de 240" required>
                                 <!-- Tipo de Multa -->
 
                                 <label for="tipoMulta" style="margin-top: 15px; margin-bottom: 10px; font-weight: 700; color:#23518C">Tipo de multa</label>
-                                <select name=tipoMulta class="form-select" aria-label="Tipo de multa">
+                                <select name=tipoMulta class="form-select" aria-label="Tipo de multa" required>
                                     <option>tipo de multa...</option>
                                     <option> Mascota sin correa</option>
                                     <option>Ruido Excesivo</option>
@@ -170,7 +170,7 @@ if (!isset($_SESSION['usuario'])) {
                                 <!-- Fecha Multa -->
 
                                 <label for="fechaMultaPago" class="form-label" style="margin-top: 15px; margin-bottom: 15px; font-weight: 700; color:#23518C" >Fecha de multa</label>
-                                <input type="date" class="form-control" name="fecMulta" aria-describedby="fecha_de_asignacion_Multa">
+                                <input type="date" class="form-control" name="fecMulta" aria-describedby="fecha_de_asignacion_Multa" required>
 
                                 <!-- Evidencia de la Multa -->
 
@@ -180,7 +180,7 @@ if (!isset($_SESSION['usuario'])) {
                                 <!-- Valor Multa -->
 
                                 <label for="valorMulta" class="form-label" style="margin-top: 15px; margin-bottom: 15px; font-weight: 700; color:#23518C;" >Valor multa</label>
-                                <input type="tel" class="form-control" name="valMulta" aria-describedby="valorMulta" maxlength="6" placeholder="valor...">
+                                <input type="tel" class="form-control" name="valMulta" aria-describedby="valorMulta" maxlength="6" placeholder="valor..." pattern="^(45\d{3}|[5-9]\d{4}|1\d{5}|2[0-4]\d{4}|250000)$" title="El valor no puede ser menor a $45.000 ni excederse de los $250.000" required>
 
                                 
                                 <button type="submit" class="btn btn-primary mb-3" style="margin-top: 30px; background-color: #0d0d0d; color: #f2ebdc; border: 1px solid rgba(0,0,0,0.15);" name="registrarMulta">Registrar multa</button>
